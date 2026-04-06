@@ -1,11 +1,11 @@
 /* ============================================================
-   main.js — Navbar · Carrusel · Scroll Reveal
+    main.js — Navbar · Carrusel · Scroll Reveal
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================================================
-     1. NAVBAR — hamburguesa
+      1. NAVBAR — hamburguesa
      ============================================================ */
   const hamburger  = document.querySelector('.navbar__hamburger');
   const mobileMenu = document.querySelector('.navbar__mobile');
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ============================================================
-     3. SCROLL REVEAL — IntersectionObserver
+      3. SCROLL REVEAL — IntersectionObserver
      ============================================================ */
   (function initReveal() {
     const elements = document.querySelectorAll('.reveal');

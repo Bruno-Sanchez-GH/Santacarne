@@ -374,30 +374,8 @@ a {
     flex-direction: column;
     gap: 0.65rem;
     margin-top: 0.5rem;
+    justify-content: center;
 }   
-    
-.hero__input {
-    width: 100%;
-    padding: 0.7rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-white);
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.25s, background 0.25s;
-    backdrop-filter: blur(4px);
-}
-    
-.hero__input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-    
-.hero__input:focus {
-    border-color: rgba(255, 255, 255, 0.6);
-    background: rgba(255, 255, 255, 0.15);
-}
     
 .hero__btn {
     display: inline-block;
