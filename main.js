@@ -5,6 +5,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================================================
+     0. NAVBAR — efecto scroll
+     ============================================================ */
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('is-scrolled');
+      } else {
+        navbar.classList.remove('is-scrolled');
+      }
+    }, { passive: true });
+  }
+
+
+  /* ============================================================
       1. NAVBAR — hamburguesa
      ============================================================ */
   const hamburger  = document.querySelector('.navbar__hamburger');
