@@ -78,6 +78,8 @@ Cambios realizados:
 - redacción en primera persona para reforzar que la web representa a Marco Internícola
 - incorporación de animaciones `reveal` en `servicio.html`
 - agregado de un bloque gris en la sección `Para quién es` de `servicio.html`
+- refuerzo SEO para búsquedas como `comisionista de hacienda`, `comisionista de carnes` y `comisionista cárnico`
+- ajuste de títulos, descripciones, hero, trayectoria y FAQ para incorporar esas búsquedas en contenido visible
 
 Pendientes de contenido:
 
