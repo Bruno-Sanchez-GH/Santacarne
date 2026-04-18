@@ -130,7 +130,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ============================================================
-      3. SCROLL REVEAL — IntersectionObserver
+      3. ANIMACIÓN 25 AÑOS
+     ============================================================ */
+  (function initYearsBadge() {
+    const badge = document.querySelector('[data-years-badge]');
+    const number = document.querySelector('[data-years-number]');
+    const progress = document.querySelector('.years-badge__progress');
+
+    if (!badge || !number || !progress) return;
+
+    const target = 25;
+    const radius = 68;
+    const circumference = 2 * Math.PI * radius;
+    let hasAnimated = false;
+
+    progress.style.strokeDasharray = `${circumference}`;
+    progress.style.strokeDashoffset = `${circumference}`;
+
+    function animateBadge() {
+      if (hasAnimated) return;
+      hasAnimated = true;
+
+      const duration = 1600;
+      const start = performance.now();
+
+      function step(now) {
+        const elapsed = now - start;
+        const progressRatio = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progressRatio, 3);
+        const currentValue = Math.max(1, Math.round(1 + (target - 1) * eased));
+
+        number.textContent = `${currentValue}`;
+        progress.style.strokeDashoffset = `${circumference * (1 - eased)}`;
+
+        if (progressRatio < 1) {
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateBadge();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.45 });
+
+    observer.observe(badge);
+  })();
+
+
+  /* ============================================================
+      4. SCROLL REVEAL — IntersectionObserver
      ============================================================ */
   (function initReveal() {
     const elements = document.querySelectorAll('.reveal');
