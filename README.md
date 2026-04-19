@@ -63,6 +63,22 @@ Cada vez que retomemos trabajo en este repo:
 
 ## Bitácora de sesiones
 
+### 2026-04-19
+
+Cambios realizados:
+
+- corrección de `sitemap.xml` para incluir `index.html` y `servicio.html`
+- actualización de `lastmod`, `changefreq` y prioridad de URLs clave
+- agregado de `Service` schema y `FAQPage` schema en `servicio.html`
+- refuerzo técnico de señales de indexación sin sumar nuevas subpáginas
+
+Pendientes de seguimiento:
+
+- reenviar `sitemap.xml` en Search Console
+- solicitar indexación manual de home y `servicio.html`
+- revisar en Search Console cuál es la URL excluida y su motivo
+- controlar durante los próximos días si `servicio.html` pasa a aparecer en páginas indexadas
+
 ### 2026-04-17
 
 Cambios realizados:
