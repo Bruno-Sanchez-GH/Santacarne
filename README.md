@@ -71,6 +71,7 @@ Cambios realizados:
 - actualización de `lastmod`, `changefreq` y prioridad de URLs clave
 - agregado de `Service` schema y `FAQPage` schema en `servicio.html`
 - refuerzo técnico de señales de indexación sin sumar nuevas subpáginas
+- unificación del dominio canónico en `santacarne.com.ar` sin `www` para evitar errores de redirección
 
 Pendientes de seguimiento:
 
